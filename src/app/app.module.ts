@@ -14,6 +14,11 @@ import { AboutUsComponent } from './AboutUs/about-us/about-us.component';
 import { LoginComponent } from './Login/login/login.component';
 import { RegisterComponent } from './Register/register/register.component';
 import { ServicesComponent } from './Services/services/services.component';
+import { LandingPageComponent } from './LandingPage/landing-page/landing-page.component';
+import { InformationComponent } from './AboutUs/information/information.component';
+import { AboutUSStatsComponent } from './AboutUs/about-usstats/about-usstats.component';
+import { ServicescontentComponent } from './Services/servicescontent/servicescontent.component';
+import { ServicesctaComponent } from './Services/servicescta/servicescta.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +33,12 @@ import { ServicesComponent } from './Services/services/services.component';
     AboutUsComponent,
     LoginComponent,
     RegisterComponent,
-    ServicesComponent
+    ServicesComponent,
+    LandingPageComponent,
+    InformationComponent,
+    AboutUSStatsComponent,
+    ServicescontentComponent,
+    ServicesctaComponent
   ],
   imports: [
     BrowserModule,
