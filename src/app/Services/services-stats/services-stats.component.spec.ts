@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ServicesctaComponent } from './servicescta.component';
+import { ServicesStatsComponent } from './services-stats.component';
 
-describe('ServicesctaComponent', () => {
-  let component: ServicesctaComponent;
-  let fixture: ComponentFixture<ServicesctaComponent>;
+describe('ServicesStatsComponent', () => {
+  let component: ServicesStatsComponent;
+  let fixture: ComponentFixture<ServicesStatsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ServicesctaComponent ]
+      declarations: [ ServicesStatsComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ServicesctaComponent);
+    fixture = TestBed.createComponent(ServicesStatsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

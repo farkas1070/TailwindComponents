@@ -1,0 +1,4 @@
+div.selected {
+    border-color: #ff0000; /* Set the desired border color for selected cards */
+    /* Add any other styles for selected cards */
+  }

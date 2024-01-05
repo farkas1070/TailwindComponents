@@ -1,0 +1,28 @@
+<div>
+    <button
+    [style.borderColor]="(isSelected==true) ? 'black' : '#c2bfba'"
+    (click)="onCardClick()"
+      class=" group w-full  border-2 rounded-md p-4  lg:p-8 mb-4 hover:shadow-lg "
+    >
+      
+      <div class="flex items-start gap-x-2">
+        <img
+          class="aspect-[2/2] w-10"
+          src="https://img.icons8.com/fluency/48/null/mac-os.png"
+        />
+        <div>
+          <h3 class="text-xl font-bold text-[#30302e]">{{job?.company}}</h3>
+          <span class="text-xs text-[#30302e]">{{job?.postDate}}</span>
+        </div>
+      </div>
+      <div class="my-4 flex flex-col items-start">
+        <h3 class="text-2xl font-medium text-[#30302e]">{{job?.jobTitle}}</h3>
+        
+        <div class="mt-2 text-sm text-gray-400">${{job?.startSalary }} - ${{job?.endSalary}} per year</div>
+      </div>
+      <div class="flex items-center justify-between">
+        <span class="text-sm font-medium text-[#30302e]">Full Time</span>
+       
+      </div>
+    </button>
+  </div>

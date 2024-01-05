@@ -9,17 +9,22 @@ import { HeroContentComponent } from './LandingPage/hero-content/hero-content.co
 import { CardsComponent } from './LandingPage/cards/cards.component';
 import { CTAComponent } from './LandingPage/cta/cta.component';
 import { FooterComponent } from './LandingPage/footer/footer.component';
-import { FeaturesComponent } from './Features/features/features.component';
 import { AboutUsComponent } from './AboutUs/about-us/about-us.component';
 import { LoginComponent } from './Login/login/login.component';
 import { RegisterComponent } from './Register/register/register.component';
-import { ServicesComponent } from './Services/services/services.component';
 import { LandingPageComponent } from './LandingPage/landing-page/landing-page.component';
 import { InformationComponent } from './AboutUs/information/information.component';
 import { AboutUSStatsComponent } from './AboutUs/about-usstats/about-usstats.component';
-import { ServicescontentComponent } from './Services/servicescontent/servicescontent.component';
-import { ServicesctaComponent } from './Services/servicescta/servicescta.component';
-
+import { LandngPageJobsComponent } from './LandingPageJobs/landng-page-jobs/landng-page-jobs.component';
+import { LandngPageJobsContentComponent } from './LandingPageJobs/landng-page-jobs-content/landng-page-jobs-content.component';
+import { LandngPageJobsCardComponent } from './LandingPageJobs/landng-page-jobs-card/landng-page-jobs-card.component';
+import { LandngPageJobsInformationComponent } from './LandingPageJobs/landng-page-jobs-information/landng-page-jobs-information.component';
+import { SelectedJobService } from 'src/services/selected-job.service';
+import { LandngPageJobsPlaceholderComponent } from './LandingPageJobs/landng-page-jobs-placeholder/landng-page-jobs-placeholder.component';
+import { ServicesComponent } from './Services/services/services.component';
+import { ServicesContentComponent } from './Services/services-content/services-content.component';
+import { ServicesStatsComponent } from './Services/services-stats/services-stats.component';
+import { RegisterFormComponent } from './Register/register-form/register-form.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,22 +34,25 @@ import { ServicesctaComponent } from './Services/servicescta/servicescta.compone
     CardsComponent,
     CTAComponent,
     FooterComponent,
-    FeaturesComponent,
     AboutUsComponent,
     LoginComponent,
     RegisterComponent,
-    ServicesComponent,
     LandingPageComponent,
     InformationComponent,
     AboutUSStatsComponent,
-    ServicescontentComponent,
-    ServicesctaComponent
+    LandngPageJobsComponent,
+    LandngPageJobsContentComponent,
+    LandngPageJobsCardComponent,
+    LandngPageJobsInformationComponent,
+    LandngPageJobsPlaceholderComponent,
+    ServicesComponent,
+    ServicesContentComponent,
+    ServicesStatsComponent,
+    RegisterFormComponent,
+    
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+  imports: [BrowserModule, AppRoutingModule],
+  providers: [SelectedJobService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
