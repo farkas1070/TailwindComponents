@@ -1,8 +1,8 @@
-<div>
+<div class="px-1">
     <button
     [style.borderColor]="(isSelected==true) ? 'black' : '#c2bfba'"
     (click)="onCardClick()"
-      class=" group w-full  border-2 rounded-md p-4  lg:p-8 mb-4 hover:shadow-lg "
+      class=" group w-full border-2 rounded-md p-4  lg:p-8 mb-4 hover:shadow-lg "
     >
       
       <div class="flex items-start gap-x-2">
@@ -12,13 +12,13 @@
         />
         <div>
           <h3 class="text-xl font-bold text-[#30302e]">{{job?.company}}</h3>
-          <span class="text-xs text-[#30302e]">{{job?.postDate}}</span>
+          <span class="text-xs text-[#30302e]">{{job?.post_date}}</span>
         </div>
       </div>
       <div class="my-4 flex flex-col items-start">
-        <h3 class="text-2xl font-medium text-[#30302e]">{{job?.jobTitle}}</h3>
+        <h3 class="text-2xl font-medium text-[#30302e]">{{job?.job_title}}</h3>
         
-        <div class="mt-2 text-sm text-gray-400">${{job?.startSalary }} - ${{job?.endSalary}} per year</div>
+        <div class="mt-2 text-sm text-gray-400">${{job?.start_salary }} - ${{job?.end_salary}} per year</div>
       </div>
       <div class="flex items-center justify-between">
         <span class="text-sm font-medium text-[#30302e]">Full Time</span>

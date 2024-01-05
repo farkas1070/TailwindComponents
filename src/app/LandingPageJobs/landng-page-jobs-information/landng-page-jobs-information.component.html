@@ -1,14 +1,14 @@
 <div class="mx-auto w-full h-full overflow-y-auto">
   <div class="relative w-full p-8 border-b-2 border-[#c2bfba] shadow-md">
     <div class="absolute top-8 right-8">
-      <img class="w-20" [src]="selectedJob?.companyLogoURL" />
+      <img class="w-20" [src]="selectedJob?.company_logo_url" />
     </div>
-    <p class="text-2xl pb-2">{{ selectedJob?.jobTitle }}</p>
-    <p class="">{{ selectedJob?.jobType }}</p>
-    <p class="">{{ selectedJob?.postDate }}</p>
+    <p class="text-2xl pb-2">{{ selectedJob?.job_title }}</p>
+    <p class="">{{ selectedJob?.job_type }}</p>
+    <p class="">{{ selectedJob?.post_date }}</p>
 
     <p class="mb-10" href="www.google.com">
-      {{ selectedJob?.companyWebsiteLink }}
+      {{ selectedJob?.company_website_link }}
     </p>
     <div class="flex">
       <button class="py-2 px-3 bg-orange-500 rounded-md mr-2 text-white">Apply Now</button>
@@ -62,10 +62,10 @@
   </div>
   <div class="relative w-full p-8 border-b-2 border-[#c2bfba]">
     <p class="text-xl pb-2">Job description</p>
-    <p>{{ selectedJob?.jobShortDescription }}</p>
-    <p>{{ selectedJob?.jobType }}</p>
+    <p>{{ selectedJob?.job_short_description }}</p>
+    <p>{{ selectedJob?.job_type }}</p>
   </div>
   <div class="relative w-full p-8 border-b-2 border-[#c2bfba]">
-    <p>{{ selectedJob?.jobLongDescription }}</p>
+    <p>{{ selectedJob?.job_long_description }}</p>
   </div>
 </div>
