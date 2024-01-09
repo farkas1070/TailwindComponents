@@ -26,6 +26,18 @@ import { ServicesContentComponent } from './Services/services-content/services-c
 import { ServicesStatsComponent } from './Services/services-stats/services-stats.component';
 import { RegisterFormComponent } from './Register/register-form/register-form.component';
 import { JobService } from 'src/services/job.service';
+import { AuthserviceService } from 'src/services/authservice.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HomeComponent } from './Home/home/home.component';
+import { HomeNavbarComponent } from './Home/home-navbar/home-navbar.component';
+import { HomeContentComponent } from './Home/home-content/home-content.component';
+import { HomeCtaComponent } from './Home/home-cta/home-cta.component';
+import { HomeTyesComponent } from './Home/home-tyes/home-tyes.component';
+import { HomeResultsComponent } from './Home/home-results/home-results.component';
+import { HomeResultsInfoComponent } from './Home/home-results-info/home-results-info.component';
+import { HomeResultscontentComponent } from './Home/home-resultscontent/home-resultscontent.component';
+import { HomeResultscardComponent } from './Home/home-resultscard/home-resultscard.component';
+import { SharedDataService } from 'src/services/shared-data.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,10 +62,19 @@ import { JobService } from 'src/services/job.service';
     ServicesContentComponent,
     ServicesStatsComponent,
     RegisterFormComponent,
+    HomeComponent,
+    HomeNavbarComponent,
+    HomeContentComponent,
+    HomeCtaComponent,
+    HomeTyesComponent,
+    HomeResultsComponent,
+    HomeResultsInfoComponent,
+    HomeResultscontentComponent,
+    HomeResultscardComponent,
     
   ],
-  imports: [BrowserModule, AppRoutingModule,HttpClientModule],
-  providers: [SelectedJobService,JobService],
+  imports: [BrowserModule, AppRoutingModule,HttpClientModule,ReactiveFormsModule,FormsModule],
+  providers: [SelectedJobService,JobService,AuthserviceService,SharedDataService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -1,0 +1,34 @@
+<section class="relative h-screen pb-4  bg-[#f2efe8] z-10">
+  <div
+    class=" h-full   pt-20 w-full  flex flex-col lg:flex-row "
+  >
+   <!-- I want this to be centered-->
+    <div class="container mx-auto flex flex-col lg:flex-row w-full ">
+     
+      <div class="w-full lg:w-1/3 h-[40vh] lg:h-full">
+        <!-- Cards with Swipe Functionality -->
+        <div class="overflow-y-auto scrollbar-hide max-h-full">
+          <!-- Your cards go here -->
+          <div
+            *ngFor="let job of this.searchData; let i = index"
+            (click)="selectJob(job)"
+          >
+            <app-landng-page-jobs-card
+              [job]="searchData[i]"
+            ></app-landng-page-jobs-card>
+          </div>
+
+          <!-- Repeat for other cards -->
+        </div>
+      </div>
+
+      <!-- Right Part (2/3 width on small screens, full width on large screens) -->
+      <div
+        class="w-full lg:w-2/3 h-[40vh] lg:h-full border-2 border-[#c2bfba]  rounded-md mt-4 lg:mt-0 lg:ml-4"
+      >
+        <!-- Information Section -->
+        <app-landng-page-jobs-information></app-landng-page-jobs-information>
+      </div>
+    </div>
+  </div>
+</section>

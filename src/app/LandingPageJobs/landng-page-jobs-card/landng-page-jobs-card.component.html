@@ -5,18 +5,18 @@
       class=" group w-full border-2 rounded-md p-4  lg:p-8 mb-4 hover:shadow-lg "
     >
       
-      <div class="flex items-start gap-x-2">
+      <div class="relative flex items-start gap-x-2">
         <img
-          class="aspect-[2/2] w-10"
-          src="https://img.icons8.com/fluency/48/null/mac-os.png"
+          class="w-14 absolute top-2 right-2"
+          src={{job?.company_logo_url}}
         />
         <div>
-          <h3 class="text-xl font-bold text-[#30302e]">{{job?.company}}</h3>
+          <h3 class="text-xl font-bold text-[#30302e] ">{{job?.company}}</h3>
           <span class="text-xs text-[#30302e]">{{job?.post_date}}</span>
         </div>
       </div>
       <div class="my-4 flex flex-col items-start">
-        <h3 class="text-2xl font-medium text-[#30302e]">{{job?.job_title}}</h3>
+        <h3 class="text-xl font-medium text-[#30302e]">{{job?.job_title}}</h3>
         
         <div class="mt-2 text-sm text-gray-400">${{job?.start_salary }} - ${{job?.end_salary}} per year</div>
       </div>
