@@ -38,6 +38,8 @@ import { HomeResultsInfoComponent } from './Home/home-results-info/home-results-
 import { HomeResultscontentComponent } from './Home/home-resultscontent/home-resultscontent.component';
 import { HomeResultscardComponent } from './Home/home-resultscard/home-resultscard.component';
 import { SharedDataService } from 'src/services/shared-data.service';
+import { HomefotterComponent } from './Home/homefotter/homefotter.component';
+import { HomebottomctaComponent } from './Home/homebottomcta/homebottomcta.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -71,6 +73,8 @@ import { SharedDataService } from 'src/services/shared-data.service';
     HomeResultsInfoComponent,
     HomeResultscontentComponent,
     HomeResultscardComponent,
+    HomefotterComponent,
+    HomebottomctaComponent,
     
   ],
   imports: [BrowserModule, AppRoutingModule,HttpClientModule,ReactiveFormsModule,FormsModule],
