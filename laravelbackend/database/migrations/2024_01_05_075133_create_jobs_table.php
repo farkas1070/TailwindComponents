@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('jobs', function (Blueprint $table) {
             $table->id('JobID');
-            $table->string('company');
+            $table->unsignedBigInteger('company_id');
             $table->decimal('start_salary', 10, 2);
             $table->decimal('end_salary', 10, 2);
             $table->date('post_date');
@@ -21,11 +21,12 @@ return new class extends Migration
             $table->text('job_short_description');
             $table->string('job_type');
             $table->string('job_place');
-            $table->string('company_website_link');
             $table->text('job_long_description');
-            $table->string('company_logo_url');
             $table->timestamps();
+    
+            $table->foreign('company_id')->references('CompanyID')->on('companies')->onDelete('cascade');
         });
+        
     }
 
     /**
