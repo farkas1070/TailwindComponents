@@ -1,0 +1,13 @@
+<div class="flex justify-center mb-40">
+  <div class="container w-full mt-0 flex flex-col items-center">
+    <div class="w-1/2 flex justify-center border-b-[1px] border-orange-400">
+      <h1 class="text-4xl mb-2 ">Top Companies Right now</h1>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-20">
+      <app-home-companies-grid-card
+        *ngFor="let job of this.companies; let i = index"
+        [data]="companies[i]"
+      ></app-home-companies-grid-card>
+    </div>
+  </div>
+</div>

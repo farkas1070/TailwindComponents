@@ -8,6 +8,7 @@ import { ServicesComponent } from './Services/services/services.component';
 import { LoginComponent } from './Login/login/login.component';
 import { HomeComponent } from './Home/home/home.component';
 import { HomeResultsComponent } from './Home/home-results/home-results.component';
+import { HomeCompaniesComponent } from './Home/home-companies/home-companies.component';
 
 const routes: Routes = [
   { path: '', component: LandingPageComponent },
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'Login', component: LoginComponent },
   { path: 'Register', component: RegisterComponent },
   { path: 'Home/Results', component: HomeResultsComponent },
+  { path: 'Home/Companies', component: HomeCompaniesComponent },
   { path: 'Home', component: HomeComponent },
   
   

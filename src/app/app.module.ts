@@ -40,6 +40,12 @@ import { HomeResultscardComponent } from './Home/home-resultscard/home-resultsca
 import { SharedDataService } from 'src/services/shared-data.service';
 import { HomefotterComponent } from './Home/homefotter/homefotter.component';
 import { HomebottomctaComponent } from './Home/homebottomcta/homebottomcta.component';
+import { HomeCompaniesComponent } from './Home/home-companies/home-companies.component';
+import { HomeCompaniescontentComponent } from './Home/home-companiescontent/home-companiescontent.component';
+import { HomeCompaniesHeaderComponent } from './Home/home-companies-header/home-companies-header.component';
+import { HomeCompaniesGridviewComponent } from './Home/home-companies-gridview/home-companies-gridview.component';
+import { HomeCompaniesGridCardComponent } from './Home/home-companies-grid-card/home-companies-grid-card.component';
+import { CompaniesserviceService } from 'src/services/companiesservice.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -75,10 +81,15 @@ import { HomebottomctaComponent } from './Home/homebottomcta/homebottomcta.compo
     HomeResultscardComponent,
     HomefotterComponent,
     HomebottomctaComponent,
+    HomeCompaniesComponent,
+    HomeCompaniescontentComponent,
+    HomeCompaniesHeaderComponent,
+    HomeCompaniesGridviewComponent,
+    HomeCompaniesGridCardComponent,
     
   ],
   imports: [BrowserModule, AppRoutingModule,HttpClientModule,ReactiveFormsModule,FormsModule],
-  providers: [SelectedJobService,JobService,AuthserviceService,SharedDataService],
+  providers: [SelectedJobService,JobService,AuthserviceService,SharedDataService,CompaniesserviceService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
