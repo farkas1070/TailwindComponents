@@ -7,11 +7,11 @@
       
       <div class="relative flex items-start gap-x-2">
         <img
-          class="w-14 absolute top-2 right-2"
-          src={{job?.company_logo_url}}
+          class="w-14 absolute top-2 right-2 "
+          src={{job?.company?.company_logo}}
         />
         <div>
-          <h3 class="text-xl font-bold text-[#30302e] ">{{job?.company}}</h3>
+          <h3 class="text-xl font-bold text-[#30302e] ">{{job?.company?.name}}</h3>
           <span class="text-xs text-[#30302e]">{{job?.post_date}}</span>
         </div>
       </div>

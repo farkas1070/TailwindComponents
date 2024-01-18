@@ -15,7 +15,7 @@ class JobsTableSeeder extends Seeder
     {
         $faker = Faker::create();
 
-        foreach (range(1, 20) as $index) {
+        foreach (range(1, 90) as $index) {
             $company_id = rand(1, 10); // Assuming you have 10 companies seeded
 
             $jobId = DB::table('jobs')->insertGetId([
@@ -32,9 +32,9 @@ class JobsTableSeeder extends Seeder
                 'updated_at' => now(),
             ]);
              // Insert job types into 'job_types' table
-         $typeIds = range(1, 5); // Assuming you have 5 types seeded
+         $typeIds = range(6, 22); // Assuming you have 5 types seeded
          shuffle($typeIds);
-         $selectedTypeIds = array_slice($typeIds, 0, rand(1, 3)); // Randomly select 1 to 3 types
+         $selectedTypeIds = array_slice($typeIds, 0, rand(1, 4)); // Randomly select 1 to 3 types
 
          foreach ($selectedTypeIds as $typeId) {
              DB::table('job_types')->insert([

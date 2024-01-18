@@ -1,5 +1,8 @@
+import { Company } from "./company.model";
+
 export interface Job {
-    company: string;
+    JobID: number;  
+    company: Company;
     start_salary: number;
     end_salary: number;
     post_date: string;

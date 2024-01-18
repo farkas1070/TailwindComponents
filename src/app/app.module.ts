@@ -46,6 +46,7 @@ import { HomeCompaniesHeaderComponent } from './Home/home-companies-header/home-
 import { HomeCompaniesGridviewComponent } from './Home/home-companies-gridview/home-companies-gridview.component';
 import { HomeCompaniesGridCardComponent } from './Home/home-companies-grid-card/home-companies-grid-card.component';
 import { CompaniesserviceService } from 'src/services/companiesservice.service';
+import { TypesserviceService } from 'src/services/typesservice.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -89,7 +90,7 @@ import { CompaniesserviceService } from 'src/services/companiesservice.service';
     
   ],
   imports: [BrowserModule, AppRoutingModule,HttpClientModule,ReactiveFormsModule,FormsModule],
-  providers: [SelectedJobService,JobService,AuthserviceService,SharedDataService,CompaniesserviceService],
+  providers: [SelectedJobService,JobService,AuthserviceService,SharedDataService,CompaniesserviceService,TypesserviceService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

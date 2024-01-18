@@ -13,4 +13,14 @@ class CompanyController extends Controller
         $companies = Company::all();
         return response()->json($companies);
     }
+
+    public function getCompanyDataById($companyID)
+    {
+        $company = Company::find($companyID);
+
+        if(!$company) {
+            return response()->json(['message' => 'Company not found'], 404);
+        }
+        return response()->json($company);
+    }
 }

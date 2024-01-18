@@ -1,14 +1,17 @@
 <div class="mx-auto w-full h-full overflow-y-auto">
   <div class="relative w-full p-8 border-b-2 border-[#c2bfba] shadow-md">
     <div class="absolute top-8 right-8">
-      <img class="w-20" [src]="selectedJob?.company_logo_url" />
+      <img class="w-20" [src]="selectedJob?.company?.company_logo" />
     </div>
     <p class="text-2xl pb-2">{{ selectedJob?.job_title }}</p>
     <p class="">{{ selectedJob?.job_type }}</p>
     <p class="">{{ selectedJob?.post_date }}</p>
 
-    <p class="mb-10" href="www.google.com">
-      {{ selectedJob?.company_website_link }}
+    <p class="mt-6" href="www.google.com">
+      {{ selectedJob?.company?.name}}
+    </p>
+    <p class="mb-10 underline" href="www.google.com">
+      {{ selectedJob?.company?.website_link}}
     </p>
     <div class="flex">
       <button class="py-2 px-3 bg-orange-500 rounded-md mr-2 text-white">Apply Now</button>

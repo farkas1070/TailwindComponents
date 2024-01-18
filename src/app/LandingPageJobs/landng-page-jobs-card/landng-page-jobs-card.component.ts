@@ -18,6 +18,7 @@ export class LandngPageJobsCardComponent implements OnInit {
   }
   onCardClick(): void {
     this.selectedJobService.setSelectedJob(this.job!);
+    
     this.isSelected = true
     
   }

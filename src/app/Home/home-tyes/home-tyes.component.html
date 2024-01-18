@@ -3,130 +3,66 @@
     <h1 class="text-xl font-bold mb-6">Browse between Job types</h1>
   </div>
   <div class="container grid sm:grid-cols-4 gap-4 grid-cols-2">
-    <div class="rounded-md flex flex-col">
+    <div  *ngIf="dataLoaded" class="rounded-md flex flex-col items-center">
       <ul class="">
-        <li class="flex h-12 items-center">
-          <button class="hover:underline hover:text-orange-400">job type</button>
+        <li
+        *ngFor="let job of this.returnSlicedArray(this.data, 0, 4); let i = index"
+          class="flex h-12 items-center"
+        >
+          <button class="hover:underline hover:text-orange-400">
+            {{ job.name }}
+          </button>
           <span
             class="text-gray-800 ml-2 bg-orange-400 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
-            >14</span
-          >
-        </li>
-        <li class="flex h-12 items-center">
-          <button class="hover:underline hover:text-orange-400">job type</button>
-          <span
-            class="text-gray-800 ml-2 bg-orange-400 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
-            >14</span
-          >
-        </li>
-        <li class="flex h-12 items-center">
-          <button class="hover:underline hover:text-orange-400">job type</button>
-          <span
-            class="text-gray-800 ml-2 bg-orange-400 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
-            >14</span
-          >
-        </li>
-        <li class="flex h-12 items-center">
-          <button class="hover:underline hover:text-orange-400">job type</button>
-          <span
-            class="text-gray-800 ml-2 bg-orange-400 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
-            >14</span
+            >{{ this.categorieNums[i].count }}</span
           >
         </li>
       </ul>
     </div>
-    <div class="rounded-md flex flex-col">
+    <div  *ngIf="dataLoaded" class="rounded-md flex flex-col items-center">
       <ul class="">
-        <li class="flex h-12 items-center">
-          <button class="hover:underline hover:text-orange-400">job type</button>
+        <li
+        *ngFor="let job of this.returnSlicedArray(this.data, 5, 9); let i = index"
+          class="flex h-12 items-center"
+        >
+          <button class="hover:underline hover:text-orange-400">
+            {{ job.name }}
+          </button>
           <span
             class="text-gray-800 ml-2 bg-orange-400 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
-            >14</span
-          >
-        </li>
-        <li class="flex h-12 items-center">
-          <button class="hover:underline hover:text-orange-400">job type</button>
-          <span
-            class="text-gray-800 ml-2 bg-orange-400 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
-            >14</span
-          >
-        </li>
-        <li class="flex h-12 items-center">
-          <button class="hover:underline hover:text-orange-400">job type</button>
-          <span
-            class="text-gray-800 ml-2 bg-orange-400 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
-            >14</span
-          >
-        </li>
-        <li class="flex h-12 items-center">
-          <button class="hover:underline hover:text-orange-400">job type</button>
-          <span
-            class="text-gray-800 ml-2 bg-orange-400 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
-            >14</span
+            >{{ this.categorieNums[i + 4]?.count }}</span
           >
         </li>
       </ul>
     </div>
-    <div class="rounded-md flex flex-col">
+    <div  *ngIf="dataLoaded" class="rounded-md flex flex-col items-center">
       <ul class="">
-        <li class="flex h-12 items-center">
-          <button class="hover:underline hover:text-orange-400">job type</button>
+        <li
+          *ngFor="let job of this.data.slice(10, 14); let i = index"
+          class="flex h-12 items-center"
+        >
+          <button class="hover:underline hover:text-orange-400">
+            {{ job.name }}
+          </button>
           <span
             class="text-gray-800 ml-2 bg-orange-400 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
-            >14</span
-          >
-        </li>
-        <li class="flex h-12 items-center">
-          <button class="hover:underline hover:text-orange-400">job type</button>
-          <span
-            class="text-gray-800 ml-2 bg-orange-400 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
-            >14</span
-          >
-        </li>
-        <li class="flex h-12 items-center">
-          <button class="hover:underline hover:text-orange-400">job type</button>
-          <span
-            class="text-gray-800 ml-2 bg-orange-400 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
-            >14</span
-          >
-        </li>
-        <li class="flex h-12 items-center">
-          <button class="hover:underline hover:text-orange-400">job type</button>
-          <span
-            class="text-gray-800 ml-2 bg-orange-400 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
-            >14</span
+            >{{ this.categorieNums[i +8]?.count }}</span
           >
         </li>
       </ul>
     </div>
-    <div class="rounded-md flex flex-col">
+    <div  *ngIf="dataLoaded" class="rounded-md flex flex-col items-center">
       <ul class="">
-        <li class="flex h-12 items-center">
-          <button class="hover:underline hover:text-orange-400">job type</button>
+        <li
+          *ngFor="let job of this.data.slice(15, 19); let i = index"
+          class="flex h-12 items-center"
+        >
+          <button class="hover:underline hover:text-orange-400">
+            {{ job.name }}
+          </button>
           <span
             class="text-gray-800 ml-2 bg-orange-400 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
-            >14</span
-          >
-        </li>
-        <li class="flex h-12 items-center">
-          <button class="hover:underline hover:text-orange-400">job type</button>
-          <span
-            class="text-gray-800 ml-2 bg-orange-400 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
-            >14</span
-          >
-        </li>
-        <li class="flex h-12 items-center">
-          <button class="hover:underline hover:text-orange-400">job type</button>
-          <span
-            class="text-gray-800 ml-2 bg-orange-400 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
-            >14</span
-          >
-        </li>
-        <li class="flex h-12 items-center">
-          <button class="hover:underline hover:text-orange-400">job type</button>
-          <span
-            class="text-gray-800 ml-2 bg-orange-400 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300"
-            >14</span
+            >{{ this.categorieNums[i +12]?.count }}</span
           >
         </li>
       </ul>
