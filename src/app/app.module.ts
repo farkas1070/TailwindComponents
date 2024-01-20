@@ -47,6 +47,12 @@ import { HomeCompaniesGridviewComponent } from './Home/home-companies-gridview/h
 import { HomeCompaniesGridCardComponent } from './Home/home-companies-grid-card/home-companies-grid-card.component';
 import { CompaniesserviceService } from 'src/services/companiesservice.service';
 import { TypesserviceService } from 'src/services/typesservice.service';
+import { CardComponent } from './LandingPage/card/card.component';
+import { SavedComponent } from './Saved/saved/saved.component';
+import { SavedcontentComponent } from './Saved/savedcontent/savedcontent.component';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -87,10 +93,27 @@ import { TypesserviceService } from 'src/services/typesservice.service';
     HomeCompaniesHeaderComponent,
     HomeCompaniesGridviewComponent,
     HomeCompaniesGridCardComponent,
-    
+    CardComponent,
+    SavedComponent,
+    SavedcontentComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule,HttpClientModule,ReactiveFormsModule,FormsModule],
-  providers: [SelectedJobService,JobService,AuthserviceService,SharedDataService,CompaniesserviceService,TypesserviceService],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule,
+    BrowserAnimationsModule, // required animations module
+    ToastrModule.forRoot(), // ToastrModule added
+  ],
+  providers: [
+    SelectedJobService,
+    JobService,
+    AuthserviceService,
+    SharedDataService,
+    CompaniesserviceService,
+    TypesserviceService,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

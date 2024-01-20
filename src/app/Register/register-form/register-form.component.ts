@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthserviceService } from 'src/services/authservice.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-register-form',
@@ -11,7 +13,12 @@ export class RegisterFormComponent implements OnInit {
   registrationForm: FormGroup;
   isLoading: boolean = false;
 
-  constructor(private service: AuthserviceService, private fb: FormBuilder) {}
+  constructor(
+    private service: AuthserviceService,
+    private fb: FormBuilder,
+    private router: Router,
+    private toastr: ToastrService
+  ) {}
 
   ngOnInit(): void {
     this.registrationForm = this.fb.group({
@@ -35,21 +42,24 @@ export class RegisterFormComponent implements OnInit {
       this.service.register(userData).subscribe(
         (response) => {
           console.log('User registered successfully', response);
-          this.isLoading = false
+          this.isLoading = false;
+          this.router.navigate(['/Home']);
         },
         (error) => {
-          this.isLoading = false
+          this.isLoading = false;
           console.error('Error during registration', error);
-  
+          this.toastr.error('Something wet wrong', 'Something went wrong');
           // Log the entire error object to the console
           console.log('Full error object:', error);
-  
+
           // Display error details in the user interface if needed
           // For example, assuming you have an error message property in your error response:
-          const errorMessage = error.error && error.error.message ? error.error.message : 'An unknown error occurred';
+          const errorMessage =
+            error.error && error.error.message
+              ? error.error.message
+              : 'An unknown error occurred';
           console.error('Error Message:', errorMessage);
         }
-    
       );
     }
   }

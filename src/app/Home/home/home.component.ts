@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { TypesserviceService } from 'src/services/typesservice.service';
 import { JobType } from 'src/types/jobtype.model';
 import { JobService } from 'src/services/job.service';
-import { forkJoin } from 'rxjs';
+
 
 @Component({
   selector: 'app-home',
