@@ -14,6 +14,10 @@ class Job extends Model
     {
         return $this->belongsTo(Company::class,'company_id', 'CompanyID');
     }
+    public function languages()
+    {
+        return $this->belongsToMany(Language::class, 'job_languages', 'JobID', 'LanguageID');
+    }
 
     public function types()
     {

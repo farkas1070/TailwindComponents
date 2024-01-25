@@ -50,9 +50,13 @@ import { TypesserviceService } from 'src/services/typesservice.service';
 import { CardComponent } from './LandingPage/card/card.component';
 import { SavedComponent } from './Saved/saved/saved.component';
 import { SavedcontentComponent } from './Saved/savedcontent/savedcontent.component';
-import { ToastrModule } from 'ngx-toastr';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { ToastComponent } from './Register/toast/toast.component';
+import { LogintoastComponent } from './Login/logintoast/logintoast.component';
+import { LoginformComponent } from './Login/loginform/loginform.component';
+import { CardskeletonComponent } from './LandingPage/cardskeleton/cardskeleton.component';
+import { HomecardComponent } from './Home/homecard/homecard.component';
+import { HomecheckboxComponent } from './Home/homecheckbox/homecheckbox.component';
+import { SharesearchqueryService } from 'src/services/sharesearchquery.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -96,6 +100,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CardComponent,
     SavedComponent,
     SavedcontentComponent,
+    ToastComponent,
+    LogintoastComponent,
+    LoginformComponent,
+    CardskeletonComponent,
+    HomecardComponent,
+    HomecheckboxComponent,
   ],
   imports: [
     BrowserModule,
@@ -103,8 +113,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
-    BrowserAnimationsModule, // required animations module
-    ToastrModule.forRoot(), // ToastrModule added
   ],
   providers: [
     SelectedJobService,
@@ -113,6 +121,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SharedDataService,
     CompaniesserviceService,
     TypesserviceService,
+    SharesearchqueryService
   ],
   bootstrap: [AppComponent],
 })

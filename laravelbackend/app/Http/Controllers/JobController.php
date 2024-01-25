@@ -11,7 +11,7 @@ class JobController extends Controller
 {
     public function index()
     {
-        $jobs = Job::with('company')->take(10)->get();
+        $jobs = Job::with('company', 'languages')->take(10)->get();
 
         return response()->json($jobs);
     }
@@ -20,7 +20,9 @@ class JobController extends Controller
     {
         $query = $request -> input('query');
 
-        $jobs = Job::where('job_title', 'like', '%' . $query . '%')-> get();
+        $jobs = Job::where('job_title', 'like', '%' . $query . '%')
+        ->with('company', 'languages')
+        -> get();
 
         return response()->json($jobs);
     }

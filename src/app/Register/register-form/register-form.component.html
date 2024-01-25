@@ -1,5 +1,5 @@
 <div
-  class="bg-white relative lg:py-20 h-screen flex items-center"
+  class="bg-white relative lg:py-20 h-screen flex items-center z-20"
   style="
     background-image: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
     background-size: cover;
@@ -7,6 +7,8 @@
     position: relative;
   "
 >
+  <app-toast [isVisible]="isVisible" [message]="message"></app-toast>
+
   <div
     *ngIf="!isLoading"
     class="absolute inset-0 bg-[#f2efe8] opacity-70"
@@ -61,7 +63,7 @@
               </p>
               <input
                 placeholder="John"
-                type="text"
+                type="username"
                 formControlName="name"
                 class="border placeholder-gray-400 focus:outline-none focus:border-black w-full pt-4 pr-4 pb-4 pl-4 mt-2 mr-0 mb-0 ml-0 text-base block bg-white border-gray-300 rounded-md"
               />
@@ -74,7 +76,7 @@
               </p>
               <input
                 placeholder="123@ex.com"
-                type="text"
+                type="email"
                 formControlName="email"
                 class="border placeholder-gray-400 focus:outline-none focus:border-black w-full pt-4 pr-4 pb-4 pl-4 mt-2 mr-0 mb-0 ml-0 text-base block bg-white border-gray-300 rounded-md"
               />

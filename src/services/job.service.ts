@@ -23,4 +23,5 @@ export class JobService {
   getJobTypes(jobID: number): Observable<any> {
     return this.http.get<any>(`http://localhost:8000/api/job/${jobID}/types`);
   }
+  
 }

@@ -13,37 +13,48 @@ class JobsTableSeeder extends Seeder
      */
     public function run(): void
     {
-        $faker = Faker::create();
+        $jobIds = DB::table('jobs')->pluck('JobID');
 
-        foreach (range(1, 90) as $index) {
-            $company_id = rand(1, 10); // Assuming you have 10 companies seeded
+    $jobtypes = ['IT', 'Finance', 'Education'];
+    $Itjobtitles = ['Software developer', 'Application developer', 'Junior Frontend developer', 'Senior Backend Developer'];
+    $Financejobtitles = ['Banker', 'Financial Advisor', 'Banker assistant','Fundraiser','Sales Manager','Finance Manager'];
+    $educationjobtitles = ['History Teacher', 'Chemistry Teacher', 'German Teacher','School Janitor','PT Trainer'];
+    $countries = ['Hungary', 'Germany', 'Austria'];
+    $remote = [true,false];
 
-            $jobId = DB::table('jobs')->insertGetId([
-                'company_id' => $company_id,
-                'start_salary' => $faker->randomFloat(2, 1000, 5000),
-                'end_salary' => $faker->randomFloat(2, 5000, 10000),
-                'post_date' => $faker->date,
-                'job_title' => $faker->jobTitle,
-                'job_short_description' => $faker->sentence,
-                'job_type' => $faker->word,
-                'job_place' => $faker->city,
-                'job_long_description' => $faker->paragraph,
-                'created_at' => now(),
-                'updated_at' => now(),
-            ]);
-             // Insert job types into 'job_types' table
-         $typeIds = range(6, 22); // Assuming you have 5 types seeded
-         shuffle($typeIds);
-         $selectedTypeIds = array_slice($typeIds, 0, rand(1, 4)); // Randomly select 1 to 3 types
+    foreach ($jobIds as $jobId) {
+        $randomJobType = $jobtypes[array_rand($jobtypes)];
+        
+        // Choose the job title array based on the job type
+        $jobTitles = [];
+        switch ($randomJobType) {
+            case 'IT':
+                $jobTitles = $Itjobtitles;
+                break;
+            case 'Finance':
+                $jobTitles = $Financejobtitles;
+                break;
+            case 'Education':
+                $jobTitles = $educationjobtitles;
+                break;
+            // Add more cases as needed
 
-         foreach ($selectedTypeIds as $typeId) {
-             DB::table('job_types')->insert([
-                 'JobID' => $jobId,
-                 'TypeID' => $typeId,
-                 'created_at' => now(),
-                 'updated_at' => now(),
-             ]);
-         }
+            default:
+                break;
         }
+
+        $randomJobTitle = $jobTitles[array_rand($jobTitles)];
+
+        // Update the job_type and job_title columns in the jobs table
+        DB::table('jobs')
+            ->where('JobID', $jobId)
+            ->update([
+                'job_type' => $randomJobType,
+                'job_title' => $randomJobTitle,
+                'job_country' => $countries[array_rand($countries)],
+                'remote' => array_rand($remote)
+            ]);
     }
+    }   
+    
 }

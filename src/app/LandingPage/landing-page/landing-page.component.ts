@@ -8,12 +8,19 @@ import { Job } from 'src/types/job.model';
 })
 export class LandingPageComponent implements OnInit {
   jobs: Job[] = [];
+  isLoaded: boolean = false;
   constructor(private jobService: JobService) {}
 
   ngOnInit(): void {
     this.jobService.getJobs().subscribe((response) => {
-      console.log(response);
-      this.jobs = response.slice(0,6)
+      
+      console.log(this.isLoaded)
+      setTimeout(() => {
+        this.jobs = response.slice(0, 6);
+        this.isLoaded = true;
+        console.log(this.isLoaded)
+      }, 2000);
+      
     });
   }
 }

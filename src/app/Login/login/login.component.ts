@@ -10,6 +10,8 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
   isLoading: boolean = false;
+  isVisible: boolean = false;
+  message: string = '';
 
   constructor(private authService: AuthserviceService, private fb: FormBuilder,private router: Router) { }
 
@@ -38,6 +40,9 @@ export class LoginComponent implements OnInit {
         (error)=>{ 
           console.log(error)
           this.isLoading = false
+          this.isVisible=true;
+          this.message = error.error.message
+          console.log(error.error.message)
         }
       )
     }

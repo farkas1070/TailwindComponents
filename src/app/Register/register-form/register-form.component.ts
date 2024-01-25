@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { AuthserviceService } from 'src/services/authservice.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-register-form',
@@ -12,12 +11,13 @@ import { ToastrService } from 'ngx-toastr';
 export class RegisterFormComponent implements OnInit {
   registrationForm: FormGroup;
   isLoading: boolean = false;
+  isVisible: boolean = false;
+  message: string = '';
 
   constructor(
     private service: AuthserviceService,
     private fb: FormBuilder,
-    private router: Router,
-    private toastr: ToastrService
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -34,6 +34,7 @@ export class RegisterFormComponent implements OnInit {
   get formControls() {
     return this.registrationForm.controls;
   }
+
   onSubmit() {
     this.isLoading = true;
     if (this.registrationForm.valid) {
@@ -48,7 +49,8 @@ export class RegisterFormComponent implements OnInit {
         (error) => {
           this.isLoading = false;
           console.error('Error during registration', error);
-          this.toastr.error('Something wet wrong', 'Something went wrong');
+          this.isVisible = true;
+          this.message =error.error.message;
           // Log the entire error object to the console
           console.log('Full error object:', error);
 

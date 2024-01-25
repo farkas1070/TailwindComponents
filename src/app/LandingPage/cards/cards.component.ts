@@ -7,7 +7,9 @@ import { Job } from 'src/types/job.model';
   styleUrls: ['./cards.component.css']
 })
 export class CardsComponent implements OnInit {
-  @Input() jobs:Job[]
+  @Input() jobs:Job[];
+  @Input() isLoaded:boolean;
+  
   constructor() { }
 
   ngOnInit(): void {
