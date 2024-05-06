@@ -1,11 +1,11 @@
 A job searching website made with Angular and Laravel
 
 
-![Alt_text](https://imgur.com/a/pOwsSoF)
+![Alt_text](https://i.imgur.com/uFe1lyI.jpg)
 
 It was built with no css extrenal library, all styling is done with stylesheets
 
-![Alt_text](https://i.imgur.com/sZcLQZy.jpeg)
+![Alt_text](https://i.imgur.com/BW2Yep0.jpeg)
 
 The App provides multiple functionalities such as profile pictue updating, uploading, email and username changing, and so much more
  
