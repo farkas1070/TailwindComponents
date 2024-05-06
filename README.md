@@ -1,27 +1,29 @@
-# Tailblocks
+A job searching website made with Angular and Laravel
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.0.
 
-## Development server
+![Alt_text](https://imgur.com/a/pOwsSoF)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+It was built with no css extrenal library, all styling is done with stylesheets
 
-## Code scaffolding
+![Alt_text](https://i.imgur.com/sZcLQZy.jpeg)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+The App provides multiple functionalities such as profile pictue updating, uploading, email and username changing, and so much more
+ 
 
-## Build
+![Alt text](https://i.imgur.com/ZiuZQ09.jpeg)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+The main functionalities of the app constists of recipebrowsing, and the ability to generate a random meal and whole menu for yourself.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+![Alt text](https://i.imgur.com/Wv7frrP.jpeg)
 
-## Running end-to-end tests
+For now Authentication is done with only email password and username, but google and other authentication possibilites will come in the future.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
+![Alt text](https://i.imgur.com/3d0vjgI.jpeg)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+The database is Firestore by google and the backend is written with Firebase, also by Google
+
+
+![Alt text](https://i.imgur.com/FfLoSbN.jpeg)
+The app will also have a social media reel watching section similar to instagram reels, but only to food recipes.
