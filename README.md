@@ -9,7 +9,7 @@ I used tailwind css for styling
 
 filtering functionalities, searching, it is not 100 done yet. 
 
-![Alt text](https://i.imgur.com/ZiuZQ09.jpeg)
+![Alt text](https://i.imgur.com/Rab1p9Z.jpeg)
 
 
 
